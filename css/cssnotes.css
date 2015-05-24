@@ -1,0 +1,32 @@
+.navbar-default .navbar-brand {
+    color: #777;
+
+
+.navbar-brand {
+	float: none;
+	color: #00007F;
+}
+
+
+@media (min-width: 568px) {
+  #login {
+    width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  #login {
+    width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  #login {
+    width: 600px;
+  }
+
+
+
+}
+#login {
+	position: fixed;
+	padding: 140px;
+}
