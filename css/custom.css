@@ -1,0 +1,42 @@
+header {
+   width: auto;
+   max-width: 1541px;
+   height: 600px; 
+   background:url("http://i.imgur.com/7mBWuLV.png") repeat-x center top;
+   background-attachment: scroll;
+   background-size: cover;
+  }
+
+.navbar-header {
+    float: left;
+    padding: 10px 10px 5px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+.navbar-default .navbar-brand {
+    float: none;
+	color: #8A3FDF;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #8A3FDF;
+}
+.navbar-brand {
+	font: 48px forte;
+}
+
+body {
+	padding-top: 65px;
+	background-color: #8A3FDF;
+	color: #00007F;
+}
+
+.loginbox {
+	position: relative;
+	margin-top: 150px;
+	padding: 30px;
+	background-color: rgba(255,255,255,.65);
+	text-align: center;
+}
