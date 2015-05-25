@@ -1,6 +1,12 @@
+minZoom: 11,
+        maxZoom: 15,
+        zoomControl: false
+
+
+
 .navbar-default .navbar-brand {
     color: #777;
-
+dark blue color: #00007F;
 
 .navbar-brand {
 	float: none;

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighbz</title>
+	<!-- CSS sheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<!-- Special fonts from Google -->
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+	<!-- Map CSS sheets and .js files -->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+</head>
+<body>
+	<header>
+		<!-- Code for the navigation bar (which only says Neighbz for now) -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Neighbz</a>
+			</div>
+		</nav>
+		<!-- The main container of the registration box, unsure if "Jumbotron" is the best
+		option here... -->
+		<div class="container col-xs-12 col-sm-10 col-sm-offset-1">
+			<!-- the class "registerbox" is in the custom.css file and makes the background semi
+			transparent as well as stay inside the container -->
+			<div class="jumbotron registerbox">
+				<div class="row">
+					<!-- First row -->
+					<h3>Let's get started!</h3>
+					<!-- First row within a row...this might not be organized the best way -->
+					<div class="row">
+						<div class="container col-xs-12 col-sm-6 col-sm-offset-3">
+							<button class="form-control btn btn-primary" type="submit">Connect with Twitter</button>
+						</div>
+					</div>
+					<div class="bottom-buffer"></div>
+					<h3 class="bottom-buffer">Or, register here:</h3>
+					<div class="container col-xs-12 col-sm-6">
+						<label for="username">Your neighbors know you as:</label>
+					</div>
+
+					<div class="container col-xs-12 col-sm-6">
+						<input type="text" class="form-control" id="username" placeholder="Username">
+					</div>
+				</div>
+				<!-- Second row of form -->
+				<div class="row addtopmargin">
+					<div class="container col-xs-12 col-sm-6">
+						<label for="password">Password:</label>
+					</div>
+
+					<div class="container col-xs-12 col-sm-6">
+						<input type="password" class="form-control" id="password" placeholder="Password">
+					</div>
+				</div>
+				<!-- Third row of form -->
+				<div class="row addtopmargin">
+					<div class="container col-xs-12 col-sm-6">
+						<label for="password">Re-enter Password:</label>
+					</div>
+
+					<div class="container col-xs-12 col-sm-6">
+						<input type="password" class="form-control" id="password" placeholder="Password">
+					</div>
+				</div>
+				<!-- Fourth row of form -->
+				<div class="row addtopmargin">
+					<div class="container col-xs-12 col-sm-6">
+						<label for="emailInput">Email:</label>
+					</div>
+
+					<div class="container col-xs-12 col-sm-6">
+						<input type="email" class="form-control" id="emailinput" placeholder="Your email">
+					</div>
+				</div>
+				<!-- Add space between top form rows and the neighborhood selection section -->
+				<div class="bottom-buffer"></div>
+				<!-- New row for the map-->
+				<div class="row">
+					<!-- Map's outer container is full width at xs size, 8/12 for larger than sm size screens  -->
+					<div class="container col-xs-12 col-sm-8">
+						<h4 class="bottom-buffer">Pick the neighborhood you belong to!</h4>
+						<!-- The map lives inside of this empty looking div and is initialized with
+						javascript at the bottom of the body -->
+						<div id="map"></div>
+					</div>
+					<!-- This container is in the same row as the map, and takes up the other 4/12 of the
+					grid for screen sizes larger than sm, or the full width of the screen for xs screens -->
+					<div class="container col-xs-12 col-sm-4 bottom-buffer">
+						<br>
+						<br>
+						<br>Selected Neighborhood:<br>
+						(the neighborhood selected in the map)<br>
+						<br>
+						<br>
+						(the button that says something like OK! or Next!)
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+
+
+
+
+
+	</header>
+<script>
+		var southWest = L.latLng(47.45595, -122.6033),
+			northEast = L.latLng(47.77348, -122.12402),
+			bounds = L.latLngBounds(southWest,northEast);
+		var map = L.map('map', {
+		    center: [47.6, -122.33],
+		    zoom: 11,
+		    minZoom: 10,
+		    maxZoom:15,
+		    zoomControl: false,
+		    maxBounds: bounds	    
+		});
+		L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.high-contrast/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYW5nZWxlc21lbGwiLCJhIjoiOGEzMTkwNDg4YjZkOGRhZjQ3ZDM3ZjdhYWY2ZDY3MjUifQ.LUIPh9r39oabsGz9H7kwtg').addTo(map);
+		
+
+
+</script>
+</body>
