@@ -1,3 +1,5 @@
+/*Issue: figure out how to make the background url go 
+to local file*/
 header {
    width: auto;
    max-width: 1541px;
@@ -17,26 +19,111 @@ header {
 
 .navbar-default .navbar-brand {
     float: none;
-	color: #8A3FDF;
+    color: #8A3FDF;
 }
+
+/*Make the Neighbz on the navbar link to home page without
+changing color, which is different from bootstrap default*/
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     color: #8A3FDF;
 }
+
 .navbar-brand {
-	font: 48px forte;
+	font: 42px 'Sansita One', cursive;
 }
 
+/*Scoot the background down a bit since navbar is covering
+some of it, and make the background of the body match the
+purple of our logo*/
 body {
 	padding-top: 65px;
 	background-color: #8A3FDF;
 	color: #00007F;
+  font-family: 'Lato', sans-serif;
 }
 
+.white-font {
+  color: white;
+}
+/*Make the login box semi transparent and stay
+in the header*/
 .loginbox {
 	position: relative;
 	margin-top: 150px;
-	padding: 30px;
+	padding: 40px 20px;
 	background-color: rgba(255,255,255,.65);
 	text-align: center;
+}
+
+/*Anything with addtopmargin as a class will have 2 pixels of margin added to the top*/
+.addtopmargin {
+  margin-top: 2px;
+}
+
+.addmoretopmargin {
+  margin-top: 7px;
+}
+
+.bottom-buffer {
+  margin-bottom: 35px;
+}
+
+.rightalign {
+  text-align: right;
+}
+
+.leftalign {
+  text-align: left;
+}
+
+/*Everthing in the first @media is specifically when viewers screens aka viewports
+are over 768 pixels wide.*/
+
+/*Make the 2 login buttons scoot over a bit when they aren't stacked*/
+@media (min-width: 768px) {
+  .loginformbuttons {
+    padding-left: 16px;
+  }
+/*Make the form labels float as close as possible to their input boxes*/
+  label {
+    float: right;
+    margin-top: 5px;
+  }
+  .centeralign {
+    text-align: center;
+  }
+  #map {
+    display: block;
+    height: 700px;
+    width: 100%;
+    margin: 0px;
+    border-style: ridge;
+    border-color: #00007F;
+    border-width: medium;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  label {
+    float: none;
+  }
+  #map {
+    display: block;
+    height: 400px;
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+/*Make the register jumbotron the same transparency as the
+login jumbotron box but scooted up to use more of the page*/
+.registerbox {
+  position: relative;
+  margin-top: 55px;
+  padding: 40px 20px;
+  background-color: rgba(255,255,255,.65);
+  text-align: center;
 }
